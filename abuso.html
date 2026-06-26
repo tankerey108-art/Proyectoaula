@@ -4,6 +4,63 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Documento sin t&iacute;tulo</title>
  <style>
+      .panel-enlaces {
+            background-color: var(--bg-tarjeta);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            box-shadow: var(--sombra);
+            border: 1px solid var(--color-borde);
+            margin-bottom: 2.5rem;
+        }
+
+        .panel-enlaces h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+        }
+
+        .panel-enlaces h3::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--color-acento);
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+
+        .lista-enlaces {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            list-style: none;
+        }
+
+        .enlace-documento {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            background-color: var(--color-cita-bg);
+            border: 1px solid var(--color-borde);
+            border-radius: 8px;
+            color: var(--texto-primario);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .enlace-documento:hover {
+            border-color: var(--color-acento);
+            background-color: #ffffff;
+            color: var(--color-acento);
+            transform: translateX(2px);
+        }
         .texto-info {
             font-family: 'Inter', sans-serif;
             font-size: 16px;       /* Tamaño ideal para lectura */
@@ -66,11 +123,10 @@ sancionados. Al combinar el liderazgo entre iguales con canales de denuncia digi
 seguros, el CECyT 11 no solo elevará la percepción teórica del riesgo, sino que
 garantizará entornos escolares y virtuales donde las conductas preventivas se conviertan
 en una práctica colectiva que proteja la permanencia escolar y la integridad de la
-comunidad politécnica.<br><br> </p> <h1 align="center"><a href="p6.jpg" > 2IM7</a></h1><br><br><h4> Gracias :)</h4>
+comunidad politécnica.<br><br> </p><section class="panel-enlaces">
+            <h3> 2IM7</h3>
+            <ul class="lista-enlaces">
+                <li><a href="p6.jpg" class="enlace-documento" target="_blank">Un grupo unido</a></li>
 </body>
                   
-  <p>&nbsp;</p>
-  <br>
-</div>
-</body>
 </html>
