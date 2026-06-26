@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recopilación de Experiencias Finales - Proyecto Aula</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-principal: #f4f6f9;
+            --bg-tarjeta: #ffffff;
+            --texto-primario: #1e293b;
+            --texto-secundario: #64748b;
+            --color-acento: #2563eb;
+            --color-cita-bg: #f8fafc;
+            --color-borde: #e2e8f0;
+            --sombra: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            --sombra-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-principal);
+            color: var(--texto-primario);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .contenedor {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--color-borde);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0f172a;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitulo {
+            font-size: 1.1rem;
+            color: var(--texto-secundario);
+            font-weight: 400;
+        }
+
+        .grid-experiencias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .tarjeta-materia {
+            background-color: var(--bg-tarjeta);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--sombra);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid var(--color-borde);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .tarjeta-materia:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--sombra-hover);
+        }
+
+        .materia-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .materia-indicador {
+            width: 4px;
+            height: 24px;
+            background-color: var(--color-acento);
+            border-radius: 2px;
+            margin-right: 0.75rem;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .descripcion {
+            color: var(--texto-primario);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .bloque-experiencia {
+            background-color: var(--color-cita-bg);
+            border-left: 4px solid var(--color-acento);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: auto;
+        }
+
+        .pregunta {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--color-acento);
+            letter-spacing: 0.025em;
+            margin-bottom: 0.5rem;
+        }
+
+        .respuesta {
+            font-style: italic;
+            color: #334155;
+            font-size: 0.95rem;
+        }
+
+        .tarjeta-materia:nth-child(1) { --color-acento: #3b82f6; } 
+        .tarjeta-materia:nth-child(2) { --color-acento: #ec4899; } 
+        .tarjeta-materia:nth-child(3) { --color-acento: #10b981; } 
+        .tarjeta-materia:nth-child(4) { --color-acento: #f59e0b; } 
+        .tarjeta-materia:nth-child(5) { --color-acento: #6366f1; } 
+        .tarjeta-materia:nth-child(6) { --color-acento: #8b5cf6; } 
+        .tarjeta-materia:nth-child(7) { --color-acento: #14b8a6; } 
+        .tarjeta-materia:nth-child(8) { --color-acento: #f43f5e; } 
+        .tarjeta-materia:nth-child(9) { --color-acento: #64748b; } 
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .grid-experiencias {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <header>
+            <h1>Recopilación de Experiencias Finales</h1>
+            <p class="subtitulo">Memoria de aprendizajes y testimonios del proyecto grupal por asignaturas</p>
+        </header>
+
+        <main class="grid-experiencias">
+
+            <article class="tarjeta-materia">
+                <div>
+                    <div class="materia-header">
+                        <div class="materia-indicador"></div>
+                        <h2>Orientación</h2>
+                    </div>
+                    <p class="descripcion">El equipo eligió una canción sobre el abuso para desarrollar un cuento ilustrado que narrara una historia relacionada. Durante el proceso, no tuvieron dificultades para trabajar entre ellos y disfrutaron de dar vida a su idea a través de la narrativa.</p>
+                </div>
+                <div class="bloque-experiencia">
+                    <p class="pregunta">¿Qué te llevas como experiencia del trabajo de Proyecto Aula?</p>
+                    <p class="respuesta">“La satisfacción de trabajar en equipo y de haber podido transformar una canción en una historia con un mensaje importante sobre el abuso”.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta-materia">
+                <div>
+                    <div class="materia-header">
+                        <div class="materia-indicador"></div>
+                        <h2>Expresión Oral</h2>
+                    </div>
+                    <p class="descripcion">Cada integrante investigó una parte del tema y se organizaron para realizar una obra representativa, extrayendo información de varias páginas web. Aunque al principio la comunicación se les complicó un poco, lograron ponerse de acuerdo y disfrutaron el desarrollo del proyecto.</p>
+                </div>
+                <div class="bloque-experiencia">
+                    <p class="pregunta">¿Qué te llevas como experiencia del trabajo de Proyecto Aula?</p>
+                    <p class="respuesta">“Fue una buena experiencia como equipo; aunque tuvimos complicaciones, creo que en general se supo comunicar bien para desarrollar nuestro proyecto”.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta-materia">
+                <div>
+                    <div class="materia-header">
+                        <div class="materia-indicador"></div>
+                        <h2>Biología</h2>
+                    </div>
+                    <p class="descripcion">El equipo diseñó trípticos interactivos con códigos QR para explicar los métodos anticonceptivos mientras la audiencia leía la información detallada. A pesar de enfrentar retos iniciales de coordinación, el proceso les permitió profundizar en el conocimiento de la prevención y el autocuidado.</p>
+                </div>
+                <div class="bloque-experiencia">
+                    <p class="pregunta">¿Qué te llevas como experiencia del trabajo de Proyecto Aula?</p>
+                    <p class="respuesta">“Una gran colaboración de trabajo en equipo y el conocimiento vital sobre métodos anticonceptivos e ITS para ser más consciente de proteger mi salud sexual”.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta-materia">
+                <div>
+                    <div class="materia-header">
+                        <div class="materia-indicador"></div>
+                        <h2>Computación</h2>
+                    </div>
+                    <p class="descripcion">Trabajaron en la estructura de un sitio web informativo, enfrentando el reto de filtrar información de alta calidad. Además del aprendizaje técnico, el equipo logró una mayor concientización sobre la sexualidad en todos sus aspectos.</p>
+                </div>
+                <div class="bloque-experiencia">
+                    <p class="pregunta">¿Qué te llevas como experiencia del trabajo de Proyecto Aula?</p>
+                    <p class="respuesta">“El aprendizaje sobre cómo manejar y presentar información de calidad en una plataforma digital para generar conciencia propia y hacia los demás”.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta-materia">
+                <div>
+                    <div class="materia-header">
+                        <div class="materia-indicador"></div>
+                        <h2>Historia</h2>
+                    </div>
+                    <p class="descripcion">Planearon una experiencia inmersiva con cortinas plateadas y juegos como la lotería para interactuar con el público. Aunque les costó trabajo organizarse con los tiempos y las tareas al inicio, aprendieron que la adaptación y la comunicación son clave para el éxito grupal.</p>
+                </div>
+                <div class="bloque-experiencia">
+                    <p class="pregunta">¿Qué te llevas como experiencia del trabajo de Proyecto Aula?</p>
+                    <p class="respuesta">“Aprendimos a organizarnos mejor y entendimos que la adaptación y la comunicación son fundamentales para lograr un buen resultado”.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta-materia">
+                <div>
+                    <div class="materia-header">
+                        <div class="materia-indicador"></div>
+                        <h2>Inglés</h2>
+                    </div>
+                    <p class="descripcion">El equipo redactó un resumen profesional o “abstract” en inglés, repartiendo las tareas de manera equitativa. Aprovecharon la oportunidad para mejorar su dominio del idioma y su capacidad de síntesis en un tema de impacto social.</p>
+                </div>
+                <div class="bloque-experiencia">
+                    <p class="pregunta">¿Qué te llevas como experiencia del trabajo de Proyecto Aula?</p>
+                    <p class="respuesta">“Una experiencia agradable personal y profesionalmente, permitiéndome mejorar mi capacidad de comunicación en otro idioma”.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta-materia">
+                <div>
+                    <div class="materia-header">
+                        <div class="materia-indicador"></div>
+                        <h2>Comunicación y Liderazgo</h2>
+                    </div>
+                    <p class="descripcion">La comunicación dentro de este equipo fue clara y efectiva, facilitando la relación con el maestro para llegar a acuerdos rápidos. El trabajo se repartió siguiendo las instrucciones y no enfrentaron dificultades operativas durante la ejecución.</p>
+                </div>
+                <div class="bloque-experiencia">
+                    <p class="pregunta">¿Qué te llevas como experiencia del trabajo de Proyecto Aula?</p>
+                    <p class="respuesta">“Me llevo la importancia de mantener una comunicación abierta con el equipo y los maestros, lo que hizo que el trabajo fuera fluido”.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta-materia">
+                <div>
+                    <div class="materia-header">
+                        <div class="materia-indicador"></div>
+                        <h2>Geometría y Trigonometría</h2>
+                    </div>
+                    <p class="descripcion">El equipo desarrolló encuestas para recopilar datos sobre el embarazo adolescente y los representó visualmente mediante gráficas. Reportaron una buena comunicación, aunque al principio hubo confusión sobre la división de tareas que resolvieron explicándose mutuamente las dudas.</p>
+                </div>
+                <div class="bloque-experiencia">
+                    <p class="pregunta">¿Qué te llevas como experiencia del trabajo de Proyecto Aula?</p>
+                    <p class="respuesta">“Me llevo la experiencia de que, aunque la comunicación sea buena, el trabajo en equipo puede ser complicado, pero explicándonos entre nosotros pudimos salir adelante”.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta-materia">
+                <div>
+                    <div class="materia-header">
+                        <div class="materia-indicador"></div>
+                        <h2>Filosofía</h2>
+                    </div>
+                    <p class="descripcion">Nuestro equipo realizó la labor de síntesis de todo el proyecto, reuniendo las experiencias de los demás equipos para entender sus procesos. Desde la filosofía, analizamos que el abuso sexual es una forma grave de violencia de poder y cómo el embarazo adolescente afecta el desarrollo personal y profesional de los jóvenes.</p>
+                </div>
+                <div class="bloque-experiencia">
+                    <p class="pregunta">¿Qué te llevas como experiencia del trabajo de Proyecto Aula?</p>
+                    <p class="respuesta">“La oportunidad de conocer a fondo cómo trabajaron todos mis compañeros y la reflexión ética sobre cómo estas realidades afectan la libertad y el futuro de las personas”.</p>
+                </div>
+            </article>
+
+        </main>
+    </div>
+
+</body>
+</html>
