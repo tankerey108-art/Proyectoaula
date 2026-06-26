@@ -1,53 +1,214 @@
-<!DOCTYPE HTML>
-<HTML Lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<meta charset"UTF-8">
-<title> Adolescencia</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adolescencia - Educación Sexual Integral</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        .texto-info {
+        :root {
+            /* Paleta de colores modernizada basada en tus tonos verdes */
+            --bg-body: #eaf8e6;       /* Fondo verde muy suave */
+            --bg-contenedor: #ffffff; /* Fondo blanco para el texto */
+            --texto-principal: #334155; /* Gris oscuro para lectura cómoda */
+            --verde-titulos: #2f855a;  /* Verde elegante para títulos */
+            --verde-acento: #48bb78;   /* Verde brillante para detalles */
+            --bg-tarjeta: #f0fdf4;     /* Fondo sutil para las tarjetas */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
             font-family: 'Inter', sans-serif;
-            font-size: 16px;       /* Tamaño ideal para lectura */
-            line-height: 1.6;      /* Espaciado entre líneas para que no se vea amontonado */
-            color: #000000;        /* Un gris muy oscuro es más cómodo que el negro puro */
-</style>
+            background-color: var(--bg-body);
+            color: var(--texto-principal);
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+
+        .contenedor {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--bg-contenedor);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            color: var(--verde-titulos);
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        h3 {
+            color: var(--verde-titulos);
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid var(--verde-acento);
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+            text-align: justify;
+            font-size: 16px;
+        }
+
+        /* --- Diseño de Secciones con Imágenes --- */
+        .seccion-con-imagen {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            margin-bottom: 3rem;
+        }
+
+        /* Invierte el orden para la segunda imagen */
+        .seccion-con-imagen.inverso {
+            flex-direction: row-reverse;
+        }
+
+        .texto-seccion {
+            flex: 1;
+        }
+
+        .imagen-ilustrativa {
+            width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            object-fit: cover;
+            border: 4px solid var(--bg-tarjeta);
+        }
+
+        /* --- Listas --- */
+        ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+        }
+
+        /* --- Diseño de Tarjetas para la parte final --- */
+        .grid-informacion {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .tarjeta {
+            background-color: var(--bg-tarjeta);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--verde-acento);
+        }
+
+        .tarjeta.ancho-completo {
+            grid-column: 1 / -1;
+        }
+
+        .tarjeta h4 {
+            color: var(--verde-titulos);
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        /* --- Responsivo para celulares --- */
+        @media (max-width: 768px) {
+            .seccion-con-imagen, .seccion-con-imagen.inverso {
+                flex-direction: column;
+            }
+            .imagen-ilustrativa {
+                width: 100%;
+                margin: 0 auto;
+            }
+            .grid-informacion {
+                grid-template-columns: 1fr;
+            }
+            .contenedor {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
-<body bgcolor="#C0F5B0">
-<h1 align="center" style="color: #4E8F3B;" class="Estilo1">Introduccion. </h1>
-<p align="center">&nbsp;</p>
-<p align="justify" class="texto-info">El presente trabajo se adentra en una de las problemáticas más sensibles y determinantes para el desarrollo de los jóvenes en el nivel medio superior: la articulación entre la educación sexual integral y la capacidad real de los adolescentes para proteger su integridad y su futuro académico. 
-En esta etapa la adolescencia, se manifiesta con una profunda vulnerabilidad biológica, psicológica y social, donde el acceso a una información clara y científica deja de ser un simple componente del plan de estudios para transformarse en un factor protector indispensable. <br>
-Para su análisis se ha delimitado de manera precisa tres grupos específicos: alumnos de segundo semestre, del turno matutino y vespertino durante el ciclo escolar vigente. A través de este recorte poblacional, el estudio se enfoca en identificar el nivel de conocimientos previos que poseen los alumnos sobre métodos anticonceptivos y derechos sexuales, evaluar su capacidad para reconocer señales de alerta o situaciones de abuso tras recibir orientación institucional, y comparar la incidencia de mitos o información errónea entre los estudiantes según su formación previa. Este desglose metodológico obedece a una justificación institucional y social urgente: en el nivel medio superior, el embarazo no planificado y las situaciones de violencia o abuso no atendidas constituyen las principales causas de deserción escolar. Por lo tanto, evaluar la eficacia de estos programas es, en el fondo, evaluar las garantías de permanencia escolar y el resguardo de los proyectos de vida de los alumnos politécnicos.<br>
-La base de este estudio descansa sobre una hipótesis que sostiene que, a mayor calidad y frecuencia de la educación sexual integral recibida, mejor es el nivel de competencias preventivas de los estudiantes ante estos riesgos; no obstante, anticipa la existencia de una brecha crítica entre el conocimiento puramente teórico y la capacidad asertiva para actuar, debido a la persistencia de mitos sociales que aún permean en las aulas. Para comprobar este supuesto, la investigación examina la relación entre la variable independiente, constituida por los programas de educación sexual impartidos en el plantel, y la variable dependiente, plasmada en la capacidad de prevención y toma de decisiones de los alumnos. A través de este recorrido, el documento no solo pretende diagnosticar el panorama actual del CECyT Once, sino decantar en una propuesta de recomendaciones sólidas que fortalezcan los conocimientos y las habilidades socioemocionales de los estudiantes, consolidando a la institución como un entorno seguro, empático y libre de violencia.
-</p><img src="foto 1.jpg" alt="" width="289" height="249" hspace="4" vspace="4" align="right" />
+<body>
 
-<p align="justify" class="texto-info"><h3 align="center">OBJETIVO GENERAL</h3><br>Analizar el impacto de la formación en educación sexual integral sobre la percepción de riesgo y las conductas preventivas ante el abuso sexual y el embarazo temprano en los estudiantes de segundo semestre del CECyT 11. “Wilfrido Massieu” del Instituto Politécnico Nacional.
+    <div class="contenedor">
+        <h1>Introducción</h1>
 
- </p>
+        <!-- Sección 1: Texto de introducción con la Foto 1 a la derecha -->
+        <div class="seccion-con-imagen">
+            <div class="texto-seccion">
+                <p>El presente trabajo se adentra en una de las problemáticas más sensibles y determinantes para el desarrollo de los jóvenes en el nivel medio superior: la articulación entre la educación sexual integral y la capacidad real de los adolescentes para proteger su integridad y su futuro académico.</p>
+                <p>En esta etapa la adolescencia, se manifiesta con una profunda vulnerabilidad biológica, psicológica y social, donde el acceso a una información clara y científica deja de ser un simple componente del plan de estudios para transformarse en un factor protector indispensable.</p>
+                <p>Para su análisis se ha delimitado de manera precisa tres grupos específicos: alumnos de segundo semestre, del turno matutino y vespertino durante el ciclo escolar vigente. A través de este recorte poblacional, el estudio se enfoca en identificar el nivel de conocimientos previos que poseen los alumnos sobre métodos anticonceptivos y derechos sexuales, evaluar su capacidad para reconocer señales de alerta o situaciones de abuso tras recibir orientación institucional, y comparar la incidencia de mitos o información errónea entre los estudiantes según su formación previa.</p>
+                <p>Este desglose metodológico obedece a una justificación institucional y social urgente: en el nivel medio superior, el embarazo no planificado y las situaciones de violencia o abuso no atendidas constituyen las principales causas de deserción escolar. Por lo tanto, evaluar la eficacia de estos programas es, en el fondo, evaluar las garantías de permanencia escolar y el resguardo de los proyectos de vida de los alumnos politécnicos.</p>
+                <p>La base de este estudio descansa sobre una hipótesis que sostiene que, a mayor calidad y frecuencia de la educación sexual integral recibida, mejor es el nivel de competencias preventivas de los estudiantes ante estos riesgos; no obstante, anticipa la existencia de una brecha crítica entre el conocimiento puramente teórico y la capacidad asertiva para actuar, debido a la persistencia de mitos sociales que aún permean en las aulas. Para comprobar este supuesto, la investigación examina la relación entre la variable independiente, constituida por los programas de educación sexual impartidos en el plantel, y la variable dependiente, plasmada en la capacidad de prevención y toma de decisiones de los alumnos. A través de este recorrido, el documento no solo pretende diagnosticar el panorama actual del CECyT Once, sino decantar en una propuesta de recomendaciones sólidas que fortalezcan los conocimientos y las habilidades socioemocionales de los estudiantes, consolidando a la institución como un entorno seguro, empático y libre de violencia.</p>
+            </div>
+            <img src="foto 1.jpg" alt="Ilustración introductoria" class="imagen-ilustrativa">
+        </div>
 
-<p align="justify" class="texto-info"><h3 align="center">OBJETIVOS ESPECÍFICOS</h3> </p>
+        <!-- Sección 2: Objetivos con la Foto 2 a la izquierda (inverso) -->
+        <div class="seccion-con-imagen inverso">
+            <div class="texto-seccion">
+                <h3>Objetivo General</h3>
+                <p>Analizar el impacto de la formación en educación sexual integral sobre la percepción de riesgo y las conductas preventivas ante el abuso sexual y el embarazo temprano en los estudiantes de segundo semestre del CECyT 11. “Wilfrido Massieu” del Instituto Politécnico Nacional.</p>
 
-<p align="justify" class="texto-info"><img src="foto2.jpg" width="226" height="223" align="left" /><ul><b><li>Identificar el nivel de conocimientos previos que poseen los alumnos de segundo semestre sobre métodos anticonceptivos y derechos sexuales.</li>
-<li>Evaluar la capacidad de los estudiantes para reconocer señales de alerta o situaciones de abuso sexual tras haber recibido orientación institucional.</li>
-<li>Comparar la incidencia de mitos o información errónea sobre la sexualidad entre los estudiantes antes y después de las jornadas de orientación (o según su formación previa).</li>
-<li>Proponer recomendaciones que fortalezcan el nivel de conocimientos que posean los alumnos de segundo semestre. </li></b>
-</p>
-<p align="justify" class="texto-info">&nbsp;</p><br><br>
-<p align="justify" class="texto-info"><b>JUSTIFICACIÓN</b><br>
-La adolescencia es una etapa crítica de vulnerabilidad. En el contexto del CECyT 11 “Wilfrido Massieu”, la prevención no es solo un tema de salud, sino de permanencia escolar. Un embarazo no planificado o una situación de abuso no atendida podrían ser causas principales de deserción en el nivel medio superior. <br>
+                <h3>Objetivos Específicos</h3>
+                <ul>
+                    <li><strong>Identificar el nivel de conocimientos previos</strong> que poseen los alumnos de segundo semestre sobre métodos anticonceptivos y derechos sexuales.</li>
+                    <li><strong>Evaluar la capacidad de los estudiantes</strong> para reconocer señales de alerta o situaciones de abuso sexual tras haber recibido orientación institucional.</li>
+                    <li><strong>Comparar la incidencia de mitos</strong> o información errónea sobre la sexualidad entre los estudiantes antes y después de las jornadas de orientación (o según su formación previa).</li>
+                    <li><strong>Proponer recomendaciones</strong> que fortalezcan el nivel de conocimientos que posean los alumnos de segundo semestre.</li>
+                </ul>
+            </div>
+            <img src="foto2.jpg" alt="Imagen de objetivos" class="imagen-ilustrativa">
+        </div>
 
-<b>DELIMITACIÓN</b><br>
-La presente investigación analiza el impacto de la educación sexual como herramienta preventiva ante el abuso y el embarazo temprano. El estudio se limita a la comunidad estudiantil de tres grupos de segundo semestre del CECyT 11 “Wilfrido Massieu” del Instituto Politécnico Nacional, durante el ciclo escolar vigente. Se pretende identificar si los programas actuales sobre educación sexual proporcionan las competencias necesarias para la prevención de riesgos biopsicosociales en este grupo específico.<br>
+        <!-- Sección 3: Tarjetas de Justificación, Delimitación e Hipótesis -->
+        <div class="grid-informacion">
+            
+            <div class="tarjeta">
+                <h4>Justificación</h4>
+                <p>La adolescencia es una etapa crítica de vulnerabilidad. En el contexto del CECyT 11 “Wilfrido Massieu”, la prevención no es solo un tema de salud, sino de permanencia escolar. Un embarazo no planificado o una situación de abuso no atendida podrían ser causas principales de deserción en el nivel medio superior.</p>
+            </div>
 
-<b>HIPOTÉSIS</b><br>
-El nivel de competencias preventivas ante el abuso sexual y el embarazo temprano en los estudiantes de segundo semestre del CECyT 11 es directamente proporcional a la calidad y frecuencia de la educación sexual integral recibida; sin embargo, existe una brecha entre el conocimiento teórico (saber qué es un anticonceptivo) y la capacidad asertiva (saber decir no o identificar un riesgo), debido a la persistencia de mitos sociales.<br>
-<b>VARIABLES DE LA HIPOTÉSIS</b><br>
-<ul><b> <li>Variable Independiente (Causa): Programas de educación sexual impartidos en el plantel.</li>
-<li>Variable Dependiente (Efecto): Capacidad de prevención y toma de decisiones de los alumnos.</li></b>
-<br>
-</strong></p>
-<p data-start="903" data-end="1244">&nbsp;</p>
-<p data-start="903" data-end="1244">&nbsp;</p>
-<p data-start="903" data-end="1244">&nbsp;</p>
+            <div class="tarjeta">
+                <h4>Delimitación</h4>
+                <p>La presente investigación analiza el impacto de la educación sexual como herramienta preventiva ante el abuso y el embarazo temprano. El estudio se limita a la comunidad estudiantil de tres grupos de segundo semestre del CECyT 11 “Wilfrido Massieu” del Instituto Politécnico Nacional, durante el ciclo escolar vigente. Se pretende identificar si los programas actuales sobre educación sexual proporcionan las competencias necesarias para la prevención de riesgos biopsicosociales en este grupo específico.</p>
+            </div>
+
+            <div class="tarjeta ancho-completo">
+                <h4>Hipótesis</h4>
+                <p>El nivel de competencias preventivas ante el abuso sexual y el embarazo temprano en los estudiantes de segundo semestre del CECyT 11 es directamente proporcional a la calidad y frecuencia de la educación sexual integral recibida; sin embargo, existe una brecha entre el conocimiento teórico (saber qué es un anticonceptivo) y la capacidad asertiva (saber decir no o identificar un riesgo), debido a la persistencia de mitos sociales.</p>
+            </div>
+
+            <div class="tarjeta ancho-completo" style="border-left-color: #3182ce; background-color: #ebf8ff;">
+                <h4 style="color: #2b6cb0;">Variables de la Hipótesis</h4>
+                <ul>
+                    <li><strong>Variable Independiente (Causa):</strong> Programas de educación sexual impartidos en el plantel.</li>
+                    <li><strong>Variable Dependiente (Efecto):</strong> Capacidad de prevención y toma de decisiones de los alumnos.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
 </body>
 </html>
