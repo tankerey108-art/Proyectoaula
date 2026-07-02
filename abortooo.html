@@ -8,6 +8,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Estilos de la galería */
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .galeria img {
+            width: 300px; /* Ancho fijo */
+            height: 200px; /* Alto fijo */
+            object-fit: cover; /* Mantiene la proporción sin deformar */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Efecto al pasar el mouse */
+        .galeria img:hover {
+            transform: scale(1.05);
+        }
 /* --- ESTILOS DEL NUEVO CUADRO DE ENLACES --- */
         .panel-enlaces {
             background-color: var(--bg-tarjeta);
@@ -272,7 +294,7 @@
                         <div class="materia-indicador"></div>
                         <h2>Cuento</h2>
                     </div>
-                    <p class="descripcion"><a href="copia de DE LA TRANQUILIDAD A LA DESCONFIANZA.pdf" download="CUENTO.pdf" class="boton-descarga"> DE LA TRANQUILIDAD A LA DESCONFIANZA.pdf</a>
+                    <p class="descripcion"><a href="Copia de DE LA TRANQUILIDAD A LA DESCONFIANZA.pdf" download="CUENTO.pdf" class="enlace-documento"> DE LA TRANQUILIDAD A LA DESCONFIANZA.pdf</a>
                 </div>
             </article>
 
@@ -283,9 +305,16 @@
                         <div class="materia-indicador"></div>
                         <h2>Video</h2>
                     </div>
-                    <p class="descripcion">  <p class="descripcion"><a href="Danna y Lilly.mp4" download="Video" class="boton-descarga"> Danna y Lilly</a></p>
+                    <p class="descripcion">  <p class="descripcion"><a href="Danna y Lilly.mp4" download="Video" class="enlace-documento"> Danna y Lilly</a></p>
                 </div>
             </article>
+            <div class="galeria">
+        <img src="1000027006 (1).jpg" alt="Foto 1">
+        <img src="1000027012.jpg" alt="Foto 2">
+        <img src="1000027015.jpg" alt="Foto 3">
+        <img src="1000027017" alt="Foto 4">
+        <img src="1000027022.jpg" alt="Foto 5">
+    </div>
 
         </main>
     </div>
