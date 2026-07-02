@@ -8,25 +8,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Estilos de la galería */
+      /* Sección de la galería */
+        .seccion-galeria {
+            background-color: #333; /* Color de fondo de la sección */
+            padding: 40px 20px;
+        }
+
+        .titulo-galeria {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
         .galeria {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
             justify-content: center;
-            padding: 20px;
         }
 
         .galeria img {
-            width: 300px; /* Ancho fijo */
-            height: 200px; /* Alto fijo */
-            object-fit: cover; /* Mantiene la proporción sin deformar */
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
 
-        /* Efecto al pasar el mouse */
         .galeria img:hover {
             transform: scale(1.05);
         }
@@ -307,11 +315,13 @@
                     <p class="descripcion">  <p class="descripcion"><a href="Danna y Lilly.mp4" download="Video" class="enlace-documento"> Danna y Lilly</a></p>
                 </div>
             </article>
+            <section class="seccion-galeria">
             <div class="galeria">
+                <h2 class="titulo-galeria">Fotos del proyecto.</h2>
         <img src="1000027006 (1).jpg" alt="Foto 1">
         <img src="1000027012.jpg" alt="Foto 2">
         <img src="1000027015.jpg" alt="Foto 3">
-        <img src="1000027017" alt="Foto 4">
+        <img src="1000027017.jpg" alt="Foto 4">
         <img src="1000027022.jpg" alt="Foto 5">
     </div>
 
